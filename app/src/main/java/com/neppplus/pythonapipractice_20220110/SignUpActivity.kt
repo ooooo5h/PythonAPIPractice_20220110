@@ -34,6 +34,12 @@ class SignUpActivity : BaseActivity() {
                     }
                     else {
 
+//                          서버가 400 등의 실패 코드를 준 경우
+                        val jsonObj = JSONObject( response.errorBody()!!.string())
+                        val message = jsonObj.getString("message")
+
+                        Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show()
+
                     }
 
 
