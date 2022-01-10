@@ -12,4 +12,12 @@ interface APIList {
         @Query("pw") pw : String,
     ) : Call<BasicResponse>
 
+
+    @GET("/sign_up")
+    fun getReqestSignUp(
+        @Query("email") email : String,
+        @Query("pw") pw : String,
+        @Query("nick") nick : String,
+    ) : Call<BasicResponse>
+
 }
