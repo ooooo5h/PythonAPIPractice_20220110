@@ -14,7 +14,7 @@ interface APIList {
 
 
     @GET("/sign_up")
-    fun getReqestSignUp(
+    fun getRequestSignUp(
         @Query("email") email : String,
         @Query("pw") pw : String,
         @Query("nick") nick : String,
