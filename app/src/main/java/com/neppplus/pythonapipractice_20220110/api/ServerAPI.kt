@@ -17,7 +17,7 @@ class ServerAPI {
 
 //        val BASE_URL = "https://api.gudoc.in"
 
-        private val BASE_URL = "https://api.gudoc.in"  //이 변수는 노출안되고, 이 클래스 내부에서만 사용할 예정 -> private 처리
+        private val BASE_URL = "http://192.168.0.37:5000"  // 우리 컴퓨터 안에서 돌아가는 파이썬 Flask서버로 접속하겠다(5000번 필수!!)
         private var retrofit : Retrofit? = null  // 서버 연결을 전담하는 변수. 기본적으로는 아직 안만든 상태기때문에 null대입
 
 //        retrofit 변수에 환경설정 + 객체화 => 가져다 쓸 수 있게 하는 기능을 함수로 제공
