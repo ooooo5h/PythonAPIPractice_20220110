@@ -3,6 +3,7 @@ package com.neppplus.pythonapipractice_20220110
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.neppplus.pythonapipractice_20220110.models.BasicResponse
+import com.neppplus.pythonapipractice_20220110.utils.ContextUtil
 import kotlinx.android.synthetic.main.activity_edit_contact.*
 import retrofit2.Callback
 
@@ -17,9 +18,7 @@ class EditContactActivity : BaseActivity() {
             val inputPhoneNum = edtPhoneNum.text.toString()
             val inputMemo = edtMemo.text.toString()
 
-            apiList.getRequestAddContact(
-
-            )
+            apiList.getRequestAddContact(ContextUtil.getUserId(mContext), inputName, inputPhoneNum, inputMemo)
 
         }
     }
