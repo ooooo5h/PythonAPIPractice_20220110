@@ -33,6 +33,12 @@ class LoginActivity : BaseActivity() {
                         
                         val br = response.body()!!
                         Toast.makeText(mContext, "${br.data.user.nickname}님 환영합니다!", Toast.LENGTH_SHORT).show()
+
+//                        로그인 성공 하면 토스트 띄우고, 메인 화면으로 이동시키자
+                        val myIntent = Intent(mContext, MainActivity::class.java)
+                        startActivity(myIntent)
+
+                        finish()
                     }
 
                     else {
