@@ -31,6 +31,8 @@ class SignUpActivity : BaseActivity() {
                         val signUpUser = br.data.user
 
                         Toast.makeText(mContext, "${signUpUser.nickname}님 회원가입을 축하합니다.", Toast.LENGTH_SHORT).show()
+
+                        finish()
                     }
                     else {
 
