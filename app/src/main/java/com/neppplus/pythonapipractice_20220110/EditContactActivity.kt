@@ -1,6 +1,7 @@
 package com.neppplus.pythonapipractice_20220110
 
 import android.os.Bundle
+import android.widget.Toast
 import com.neppplus.pythonapipractice_20220110.models.BasicResponse
 import com.neppplus.pythonapipractice_20220110.utils.ContextUtil
 import kotlinx.android.synthetic.main.activity_edit_contact.*
@@ -25,6 +26,10 @@ class EditContactActivity : BaseActivity() {
                     call: Call<BasicResponse>,
                     response: Response<BasicResponse>
                 ) {
+                    if (response.isSuccessful){
+                        Toast.makeText(mContext, "연락처 등록 성공", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
 
 
                 }
