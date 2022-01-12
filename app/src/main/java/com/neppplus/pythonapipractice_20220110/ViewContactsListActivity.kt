@@ -20,6 +20,12 @@ class ViewContactsListActivity : BaseActivity() {
         apiList.getRequestContactList( ContextUtil.getUserId(mContext)).enqueue(object : Callback<BasicResponse>{
             override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
 
+                if (response.isSuccessful){
+
+                    val br = response.body()!!
+                    mContactList.addAll(br.data.contacts)
+                }
+
             }
 
             override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
