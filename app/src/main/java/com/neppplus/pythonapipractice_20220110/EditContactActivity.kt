@@ -16,7 +16,7 @@ class EditContactActivity : BaseActivity() {
             val inputMemo = edtMemo.text.toString()
             
 //            API 호출 날릴 기능이 없네? API주소도 없네. 파이썬으로 이동
-            apiList.get
+            apiList.getRequestAddContact()
         }
     }
 }
