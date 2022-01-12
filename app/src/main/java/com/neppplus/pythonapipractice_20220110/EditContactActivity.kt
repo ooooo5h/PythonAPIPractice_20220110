@@ -19,8 +19,7 @@ class EditContactActivity : BaseActivity() {
             val inputName = edtName.text.toString()
             val inputPhoneNum = edtPhoneNum.text.toString()
             val inputMemo = edtMemo.text.toString()
-            
-//            API 호출 날릴 기능이 없네? API주소도 없네. 파이썬으로 이동
+
             apiList.getRequestAddContact(ContextUtil.getUserId(mContext), inputName, inputPhoneNum, inputMemo).enqueue(object : Callback<BasicResponse>{
                 override fun onResponse(
                     call: Call<BasicResponse>,
